@@ -39,7 +39,7 @@ SHELL ["/bin/bash", "-c"]
 RUN echo "alias GAP_SDK='cd /home/gap_sdk_private && source .venv/bin/activate && source configs/gap9_evk_audio.sh'" >> ~/.bashrc
 
 # Making the (.venv) recognized by jupyter notebooks and downgrade numpy to 1.26.4 since it got upgraded unwanted to 2.0.2
-RUN /home/gap_sdk_private/.venv/bin/pip install ipykernel jupyter numpy==1.26.4
+RUN /home/gap_sdk_private/.venv/bin/pip install ipykernel jupyter numpy==1.26.4 seaborn
 RUN /home/gap_sdk_private/.venv/bin/python -m ipykernel install --user --name=venv --display-name "(.venv)"
 
 EXPOSE 8888
