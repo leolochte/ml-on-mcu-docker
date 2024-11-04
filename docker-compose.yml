@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build: .
+    image: mlonmcu:gapsdk
+    ports:
+      - "8888:8888"
